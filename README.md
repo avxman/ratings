@@ -60,7 +60,7 @@ php artisan vendor:publish --tag="avxman-ratings-config"
 Когда в модели уже ранее Вами был написан метод `rating()`, тогда его нужно переименовать, так как трейт использует данный метод
 
 ## Примеры получения результатов
-####Вызов в controllers
+#### Вызов в controllers
 ```injectablephp
 use App\Models\User;
 use Avxman\Rating\Facades\RatingFacade;
@@ -100,7 +100,7 @@ RatingFacade::getMany($users, 'toJson');
 RatingFacade::getMany($users, 'toHtml');
 $this->result['ratings'] = $users->first()->getRating??'';
 ```
-####Вызов во views
+#### Вызов во views
 ```injectablephp
 
 ```
