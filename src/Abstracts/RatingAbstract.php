@@ -5,6 +5,7 @@ namespace Avxman\Rating\Abstracts;
 use Avxman\Rating\Traits\RatingTrait;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\DB;
 
 abstract class RatingAbstract
 {
@@ -157,7 +158,11 @@ abstract class RatingAbstract
      * @return Model|null
     */
     protected function createRating(array $data) : Model|null{
-        return $this->modelName::create($data);
+        $model = null;
+        DB::transaction(function () use ($data, &$model){
+            $model = $this->modelName::create($data);
+        });
+        return $model;
     }
 
     /**
@@ -166,7 +171,11 @@ abstract class RatingAbstract
      * @return bool
     */
     protected function createRatingUser(array $data) : bool{
-        return (bool)$this->modelUserName::create($data);
+        $status = false;
+        DB::transaction(function () use ($data, &$status){
+            $status = (bool)$this->modelUserName::create($data);
+        });
+        return $status;
     }
 
     /**
