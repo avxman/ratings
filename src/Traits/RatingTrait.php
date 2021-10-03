@@ -20,8 +20,6 @@ trait RatingTrait
     */
     protected array $type_list = [
         'like'=>2,
-        'five'=>5,
-        'ten'=>10
     ];
 
     /**

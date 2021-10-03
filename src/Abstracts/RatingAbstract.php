@@ -22,6 +22,7 @@ abstract class RatingAbstract
         $this->enabled = $config->get('enabled');
         $this->view = $config->get('views');
         $this->except_model = $config->get('except_model');
+        $this->type_list = array_merge($this->type_list, $config->get('type_list'));
         $this->convertType($config->get('type'));
         $this->modelName = $config->get('model')['rating'];
         $this->modelUserName = $config->get('model')['rating_user'];

@@ -1,5 +1,5 @@
 @if($model->enabled)
-    <div class="star-item" data-stars="{{$model->stars}}" data-type="{{$model->type}}" data-grade="{{$model->grade}}" data-rating="{{$model->rating}}" data-count="{{$model->voted}}" data-id="{{$model->id}}">
+    <div class="star-item" data-stars="{{$model->stars}}" data-type="{{$model->type}}" data-grade="{{$model->grade}}" data-rating="{{$model->rating}}" data-count="{{$model->voted}}" data-id="{{$model->id}}" data-model="{{$model->model_class}}" data-model-id="{{$model->model_id}}">
         {!! $items !!}
     </div>
 @endif
