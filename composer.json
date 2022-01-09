@@ -3,13 +3,13 @@
     "description": "The module ratings post, comment or other object for laravel >=8.0",
     "homepage": "https://github.com/avxman/ratings",
     "notification-url": "https://packagist.org/downloads/",
-    "version": "0.9.5",
+    "version": "1.0.0",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
             "name": "Alexandr Kheyder",
-            "email": "downloadsite.x@gmail.com"
+            "email": "wk.kheyder.a.v@gmail.com"
         }
     ],
     "require": {
